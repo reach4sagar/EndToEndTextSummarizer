@@ -1,0 +1,165 @@
+[2024-07-31 12:59:23,619: INFO: server: Started server process [19520]]
+[2024-07-31 12:59:23,619: INFO: on: Waiting for application startup.]
+[2024-07-31 12:59:23,620: INFO: on: Application startup complete.]
+[2024-07-31 12:59:23,621: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-07-31 12:59:41,076: INFO: server: Shutting down]
+[2024-07-31 12:59:41,186: INFO: on: Waiting for application shutdown.]
+[2024-07-31 12:59:41,186: INFO: on: Application shutdown complete.]
+[2024-07-31 12:59:41,186: INFO: server: Finished server process [19520]]
+[2024-07-31 13:01:12,007: INFO: server: Started server process [11284]]
+[2024-07-31 13:01:12,008: INFO: on: Waiting for application startup.]
+[2024-07-31 13:01:12,524: INFO: on: Application startup complete.]
+[2024-07-31 13:01:12,525: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-07-31 13:01:52,422: INFO: server: Started server process [3928]]
+[2024-07-31 13:01:52,423: INFO: on: Waiting for application startup.]
+[2024-07-31 13:01:52,423: INFO: on: Application startup complete.]
+[2024-07-31 13:01:52,423: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-07-31 13:13:50,469: INFO: config: PyTorch version 2.4.0 available.]
+[2024-07-31 13:13:51,208: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-31 13:13:51,212: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 13:13:51,213: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 13:13:51,214: INFO: common: created directory at: artifacts]
+[2024-07-31 13:13:51,214: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-31 13:13:51,490: ERROR: main: <urlopen error [Errno 11001] getaddrinfo failed>]
+Traceback (most recent call last):
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 1354, in do_open
+    h.request(req.get_method(), req.selector, req.data, headers,
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\http\client.py", line 1256, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\http\client.py", line 1302, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\http\client.py", line 1251, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\http\client.py", line 1011, in _send_output
+    self.send(msg)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\http\client.py", line 951, in send
+    self.connect()
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\http\client.py", line 1418, in connect
+    super().connect()
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\http\client.py", line 922, in connect
+    self.sock = self._create_connection(
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\socket.py", line 787, in create_connection
+    for res in getaddrinfo(host, port, 0, SOCK_STREAM):
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\socket.py", line 918, in getaddrinfo
+    for res in _socket.getaddrinfo(host, port, family, type, proto, flags):
+socket.gaierror: [Errno 11001] getaddrinfo failed
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    data_ingestion.main()
+  File "f:\aiml\projects\ineuron\end-to-end-text-summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "f:\aiml\projects\ineuron\end-to-end-text-summarizer\src\textSummarizer\conponents\data_ingestion.py", line 20, in download_file
+    filename, headers = request.urlretrieve(
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 525, in open
+    response = self._open(req, data)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 542, in _open
+    result = self._call_chain(self.handle_open, protocol, protocol +
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 1397, in https_open
+    return self.do_open(http.client.HTTPSConnection, req,
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 1357, in do_open
+    raise URLError(err)
+urllib.error.URLError: <urlopen error [Errno 11001] getaddrinfo failed>
+[2024-07-31 13:14:37,973: INFO: config: PyTorch version 2.4.0 available.]
+[2024-07-31 13:14:38,662: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-31 13:14:38,832: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 13:14:38,833: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 13:14:38,833: INFO: common: created directory at: artifacts]
+[2024-07-31 13:14:38,834: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-31 13:14:39,586: ERROR: main: HTTP Error 403: Forbidden]
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    data_ingestion.main()
+  File "f:\aiml\projects\ineuron\end-to-end-text-summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "f:\aiml\projects\ineuron\end-to-end-text-summarizer\src\textSummarizer\conponents\data_ingestion.py", line 20, in download_file
+    filename, headers = request.urlretrieve(
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[2024-07-31 13:15:09,598: INFO: server: Shutting down]
+[2024-07-31 13:15:09,708: INFO: on: Waiting for application shutdown.]
+[2024-07-31 13:15:10,142: INFO: on: Application shutdown complete.]
+[2024-07-31 13:15:10,142: INFO: server: Finished server process [3928]]
+[2024-07-31 13:15:27,415: INFO: server: Started server process [12360]]
+[2024-07-31 13:15:27,416: INFO: on: Waiting for application startup.]
+[2024-07-31 13:15:27,416: INFO: on: Application startup complete.]
+[2024-07-31 13:15:27,417: INFO: server: Uvicorn running on http://0.0.0.0:8080 (Press CTRL+C to quit)]
+[2024-07-31 13:15:41,090: INFO: config: PyTorch version 2.4.0 available.]
+[2024-07-31 13:15:41,777: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-31 13:15:41,780: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 13:15:41,782: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 13:15:41,782: INFO: common: created directory at: artifacts]
+[2024-07-31 13:15:41,782: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-31 13:15:42,530: ERROR: main: HTTP Error 403: Forbidden]
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    data_ingestion.main()
+  File "f:\aiml\projects\ineuron\end-to-end-text-summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "f:\aiml\projects\ineuron\end-to-end-text-summarizer\src\textSummarizer\conponents\data_ingestion.py", line 20, in download_file
+    filename, headers = request.urlretrieve(
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
+[2024-07-31 13:15:57,524: INFO: config: PyTorch version 2.4.0 available.]
+[2024-07-31 13:15:58,207: INFO: main: >>>>>> stage Data Ingestion stage started <<<<<<]
+[2024-07-31 13:15:58,211: INFO: common: yaml file: config\config.yaml loaded successfully]
+[2024-07-31 13:15:58,212: INFO: common: yaml file: params.yaml loaded successfully]
+[2024-07-31 13:15:58,213: INFO: common: created directory at: artifacts]
+[2024-07-31 13:15:58,213: INFO: common: created directory at: artifacts/data_ingestion]
+[2024-07-31 13:15:58,962: ERROR: main: HTTP Error 403: Forbidden]
+Traceback (most recent call last):
+  File "main.py", line 14, in <module>
+    data_ingestion.main()
+  File "f:\aiml\projects\ineuron\end-to-end-text-summarizer\src\textSummarizer\pipeline\stage_01_data_ingestion.py", line 15, in main
+    data_ingestion.download_file()
+  File "f:\aiml\projects\ineuron\end-to-end-text-summarizer\src\textSummarizer\conponents\data_ingestion.py", line 20, in download_file
+    filename, headers = request.urlretrieve(
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 247, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 222, in urlopen
+    return opener.open(url, data, timeout)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 531, in open
+    response = meth(req, response)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 640, in http_response
+    response = self.parent.error(
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 569, in error
+    return self._call_chain(*args)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 502, in _call_chain
+    result = func(*args)
+  File "f:\AIML\Projects\Ineuron\End-to-end-Text-Summarizer\env\lib\urllib\request.py", line 649, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 403: Forbidden
